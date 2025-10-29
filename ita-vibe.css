@@ -1,0 +1,54 @@
+/* Fondo general */
+body, html {
+  height: 100%;
+  background-color: #f5f5f4;
+}
+
+/* Flecha de retroceso */
+.back-arrow {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 1.5rem;
+}
+
+/* Contenedor del formulario */
+.register-card {
+  width: 380px;
+  max-width: 90%;
+  margin-top: 6rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Icono de usuario */
+.user-icon {
+  font-size: 3.5rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+/* Campos de texto */
+.form-control {
+  border-radius: 6px;
+  background-color: #f3f3f3;
+  border: none;
+}
+
+/* Botón */
+.btn-outline-dark {
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: 500;
+}
+
+/* Adaptación móvil */
+@media (max-width: 576px) {
+  .register-card {
+    margin-top: 4rem;
+    padding: 1.5rem;
+  }
+}
