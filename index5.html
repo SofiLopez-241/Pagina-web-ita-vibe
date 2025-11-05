@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mapa Web Simulado y Personalizado</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+ <!-- navar -->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="Logo ita-vibe 2.png" alt="Bootstrap" width="100" height="65">
+            </a>
+        </div>
+    </nav>
+    <style>
+        /* 2. CSS para definir el tamaño del contenedor del mapa */
+        #map {
+            /* Es CRUCIAL que el contenedor del mapa tenga un alto definido */
+            height: 500px;
+            width: 100%;
+            /* Puedes añadir más estilos aquí para simular el look and feel de Google Maps,
+               como sombras o bordes redondeados, si lo deseas. */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Itagüí</h2>
+
+ <div id="map"></div>
+
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+    <script>
+        // Coordenadas de itagüí, Colombia (ficticias para este ejemplo)
+        const latitud = 6.1846; // Itagüí, Colombia
+        const longitud = -75.5991;
+        const zoomInicial = 15;
+
+        // 4. Inicializar el mapa en el contenedor 'map'
+        const mapa = L.map('map').setView([latitud, longitud], zoomInicial);
+
+        // 5. Definir la Capa de Mosaicos (Tile Layer)
+        // Usaremos un estilo minimalista (CartoDB Positron) para que se vea
+        // como un mapa personalizado y diferente al de Google.
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: 'Mapa Simulado | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> | &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            maxZoom: 19,
+        }).addTo(mapa);
+
+        // 6. Añadir un marcador simulado (Pin)
+        L.marker([latitud, longitud]).addTo(mapa)
+            .bindPopup('**Nuestra Ubicación Ficticia**')
+            .openPopup();
+            
+    </script>
+
+</body>
+</html>
