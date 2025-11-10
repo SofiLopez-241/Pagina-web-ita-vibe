@@ -8,18 +8,20 @@
      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
-    <style>
-        /* 2. CSS para definir el tamaño del contenedor del mapa */
+       <style>
+        /* Ocupa toda la página sin scroll extra */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        /* El div del mapa ocupa todo el espacio disponible */
         #map {
-            /* Es CRUCIAL que el contenedor del mapa tenga un alto definido */
-            height: 500px;
+            height: 100%;
             width: 100%;
-            /* Puedes añadir más estilos aquí para simular el look and feel de Google Maps,
-               como sombras o bordes redondeados, si lo deseas. */
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
         }
     </style>
+
 </head>
 <body>
  <!-- navar -->
@@ -30,8 +32,6 @@
             </a>
         </div>
     </nav>
-    <h2>Itagüí</h2>
-
  <div id="map"></div>
 
      <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -40,7 +40,7 @@
      crossorigin=""></script>
 
     <script>
-        // Coordenadas de itagüí, Colombia (ficticias para este ejemplo)
+        // Coordenadas de itagüí, Colombia - Puedes cambiarlas a cualquier otra ubicación
         const latitud = 6.1846; // Itagüí, Colombia
         const longitud = -75.5991;
         const zoomInicial = 15;
