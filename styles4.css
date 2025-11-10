@@ -1,0 +1,10 @@
+.divider-single {
+  height: 10px;
+  background-color: #000;
+  margin: 40px 0;
+  }
+  /* Fondo general */
+body {
+  height: 100%;
+  background-color: #f9eee0 !important;
+}

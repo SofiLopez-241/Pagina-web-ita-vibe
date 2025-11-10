@@ -1,15 +1,28 @@
 /* Fondo general */
 body, html {
   height: 100%;
-  background-color: #f5f5f4;
+  background-color: #C7D498;
 }
-
-/* Flecha de retroceso */
-.back-arrow {
+/* Fondo semicircular */
+.bg-hero {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  font-size: 1.5rem;
+  inset: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  pointer-events: none;
+}
+.hero-circle {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140%;
+  height: 60%;
+  background: linear-gradient(180deg, #f9eee0 0%, #f9eee0 100%);
+  border-radius: 50%;
+  opacity: 100%;
 }
 
 /* Contenedor del formulario */
