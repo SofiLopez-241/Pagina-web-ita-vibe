@@ -52,12 +52,10 @@ body, html {
 }
 
 /* Botón */
-.btn-outline-dark {
-  border-radius: 20px;
-  padding: 8px 20px;
-  font-weight: 500;
+.btn.btn-outline-dark-custom {
+  background: #9BB953;
+  color: #1e1e1e;
 }
-
 /* Adaptación móvil */
 @media (max-width: 576px) {
   .register-card {

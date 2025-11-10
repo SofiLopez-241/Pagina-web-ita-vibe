@@ -24,3 +24,8 @@ body, html {
   border-radius: 50%;
   opacity: 100%;
 }
+/* Botón */
+.btn.btn-dark-custom {
+  background: #9BB953;
+  color: #1e1e1e;
+}
