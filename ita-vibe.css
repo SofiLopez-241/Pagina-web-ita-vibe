@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Arial", sans-serif;
-    background-color: #f9eee0;
+    background-color: #f9eee0 !important;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -21,12 +21,12 @@ body {
 }
 
 .top-buttons .iniciar {
-    background-color: #c7d498;
+    background-color: #c7d498 !important;
 }
 
 .top-buttons .registrar {
-    background-color: #c7d498;
-    color: #c7d498;
+    background-color: #c7d498 !important;
+    color: #c7d498 !important;
 }
 
 /* Secciones izquierda y derecha */
@@ -66,4 +66,18 @@ main {
     font-family: "italiana", sans-serif;
     font-size: 64px;
     font-weight: 300;
+}
+.btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+}
+.green {
+    background-color: #c7d498 !important;
+}
+.grey {
+    background-color: #bad1b0 !important;
 }
