@@ -1,0 +1,77 @@
+body {
+    background: #f8f1e7;
+    overflow-x: hidden;
+}
+
+/* Semicírculo grande a la izquierda */
+.semi-left-circle {
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    background: #c4d095;
+    z-index: -1;
+}
+
+/* Perfil */
+.profile-img {
+    width: 70px;
+    height: 70px;
+    background: #b7c791;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
+.setting-item {
+    border: none;
+    background: transparent;
+    font-size: 17px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.setting-item:hover {
+    opacity: 0.8;
+}
+
+.setting-content {
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.settings-list {
+    max-width: 550px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .semi-left-circle {
+        width: 400px;
+        height: 400px;
+        top: -100px;
+        left: -150px;
+    }
+
+    .profile-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
