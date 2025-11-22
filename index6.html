@@ -1,52 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Mapa Leaflet - Página completa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
 
-    <!-- Leaflet CSS -->
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        /* Ocupa toda la página sin scroll extra */
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-        /* El div del mapa ocupa todo el espacio disponible */
-        #map {
-            height: 100%;
-            width: 100%;
-            display: block;
-        }
-    </style>
+    <!-- Icons Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style6.css">
 </head>
+
 <body>
-    <div id="map"></div>
+<!-- navar -->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="Logo ita-vibe 2.png" alt="Bootstrap" width="100" height="65">
+            </a>
+        </div>
+    </nav>
+    <!-- CONTENIDO -->
+    <main class="container py-4">
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        // Inicializa el mapa centrado (lat, lon) y con zoom
-        const map = L.map('map').setView([40.4168, -3.7038], 6); // ejemplo: Madrid
+        <h2 class="fw-bold text-center mb-4 animate-fade">Perfil</h2>
 
-        // Capa de teselas (OpenStreetMap)
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
-        }).addTo(map);
+        <div class="row g-4 justify-content-center">
 
-        // Marcador de ejemplo con popup
-        L.marker([40.4168, -3.7038]).addTo(map)
-            .bindPopup('Madrid<br>Ejemplo de mapa con Leaflet.')
-            .openPopup();
+            <!-- MENÚ IZQUIERDO -->
+            <div class="col-12 col-md-5 col-lg-4">
+                <ul class="list-group shadow-sm rounded overflow-hidden">
 
-        // Añade control de escala
-        L.control.scale().addTo(map);
-    </script>
+                    <li class="list-group-item d-flex justify-content-between align-items-center item-hover">
+                        <span><i class="bi bi-gear me-2"></i> Configuraciones</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center item-hover">
+                        <span><i class="bi bi-calendar-week me-2"></i> Tus reservas</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center item-hover">
+                        <span><i class="bi bi-question-circle me-2"></i> Obtén ayuda</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center item-hover text-danger">
+                        <span><i class="bi bi-box-arrow-right me-2"></i> Cerrar sesión</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- INFORMACIÓN DE PERFIL -->
+            <div class="col-12 col-md-5 col-lg-4 text-center">
+
+                <div class="perfil-container mx-auto mb-3 animate-fade">
+                    <i class="bi bi-person fs-1"></i>
+                </div>
+
+                <h6 class="fw-bold">PERSONA</h6>
+                <p class="text-muted mb-1">email@example.com</p>
+
+                <button class="btn btn-dark btn-sm px-4 mt-2">
+                    Editar perfil
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- SEMICÍRCULO DECORATIVO -->
+    <div class="semi-circle"></div>
+
 </body>
 </html>
