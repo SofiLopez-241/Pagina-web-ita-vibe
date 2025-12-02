@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <title>Vista del lugar</title>
-  <link rel="stylesheet" href="estilo3.css">
+  <link rel="stylesheet" href="estilo4.css">
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
@@ -82,7 +82,7 @@
 
     <!-- Encabezado -->
     <div class="d-flex justify-content-between align-items-center mb-3">
-      <h2 class="fw-semibold">La Montaña Que Piensa</h2>
+      <h2 class="fw-semibold">Teatro Caribe</h2>
       <div>
         <a href="#" class="text-decoration-none text-dark me-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share"
@@ -107,13 +107,13 @@
     <div class="row g-2">
       <!-- Imagen principal -->
       <div class="col-md-8">
-        <img src="Captura de pantalla 2025-10-29 154425.png" class="img-fluid rounded-3" alt="Principal">
+        <img src="Nuevo-Teatro-Caribe.jpg" class="img-fluid rounded-3" alt="Principal">
       </div>
       <!-- Imágenes secundarias -->
       <div class="col-md-4">
         <div class="d-flex flex-column gap-2">
-          <img src="Captura de pantalla 2025-10-29 163153.png" class="img-fluid rounded-3" alt="Foto 1">
-          <img src="Mirador-en-Itagui.jpg" class="img-fluid rounded-3" alt="Foto 2">
+          <img src="teatro-caribe-itagui-11.jpeg" class="img-fluid rounded-3" alt="Foto 1">
+          <img src="caribe.jpeg" class="img-fluid rounded-3" alt="Foto 2">
         </div>
       </div>
     </div>
@@ -136,18 +136,11 @@
     <div class="description-section">
         <h4>Sobre este lugar</h4>
         <p>
-            La Montaña que Piensa es uno de los destinos turísticos más especiales de Itagüí, 
-            reconocido por su vista panorámica del Valle de Aburrá y su ambiente natural.
+           El Centro Cultural Caribe es un espacio dedicado a la promoción del arte, la música y las tradiciones locales en Itagüí. Este escenario se ha convertido en un punto de encuentro para la comunidad, donde se desarrollan talleres, presentaciones artísticas, eventos culturales y actividades formativas abiertas al público.
         </p>
 
         <p>
-            Allí también se realizan presentaciones artísticas, música en vivo e interpretaciones,
-            lo que convierte el lugar en un espacio cultural y turístico.
-        </p>
-
-        <p>
-            Además funciona como restaurante, ideal para disfrutar comida típica y compartir 
-            mientras se aprecia un paisaje único.
+           Su ambiente acogedor y su enfoque en el fortalecimiento de la identidad cultural lo convierten en un lugar ideal para descubrir talentos locales y participar en iniciativas que impulsan la creatividad y la participación ciudadana. Es un lugar clave dentro del mapa cultural del municipio.
         </p>
     </div>
 
@@ -165,7 +158,7 @@
 
     <script>
         // Inicializa el mapa centrado (lat, lon) y con zoom
-        const map = L.map('map').setView([6.19533, -75.61902], 15); // Itagüí, Colombia
+        const map = L.map('map').setView([6.17302, -75.60757], 20); // Itagüí, Colombia
 
         // Capa de teselas (OpenStreetMap)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -174,8 +167,8 @@
         }).addTo(map);
 
         // Marcador de ejemplo con popup
-        L.marker([6.19533, -75.61902]).addTo(map)
-            .bindPopup('La montaña que piensa')
+        L.marker([6.17302, -75.60757]).addTo(map)
+            .bindPopup('Centro Cultural Caribe')
             .openPopup();
 
         // Añade control de escala

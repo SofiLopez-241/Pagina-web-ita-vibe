@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <title>Vista del lugar</title>
-  <link rel="stylesheet" href="estilo3.css">
+  <link rel="stylesheet" href="estilo4.css">
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
@@ -28,10 +28,10 @@
  <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-              <a href="index.html">
+                <a href="index.html">
                 <img src="Logo ita-vibe 2.png" alt="bootstrap" width="100" height="65"
                     class="d-inline-block align-text-top">
-              </a>
+                </a>
             </a>
             <div class="nav-center">
                 <form class="search-form">
@@ -82,7 +82,7 @@
 
     <!-- Encabezado -->
     <div class="d-flex justify-content-between align-items-center mb-3">
-      <h2 class="fw-semibold">La Montaña Que Piensa</h2>
+      <h2 class="fw-semibold">Iglesia de Nuestra Señora del Rosario</h2>
       <div>
         <a href="#" class="text-decoration-none text-dark me-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share"
@@ -107,13 +107,13 @@
     <div class="row g-2">
       <!-- Imagen principal -->
       <div class="col-md-8">
-        <img src="Captura de pantalla 2025-10-29 154425.png" class="img-fluid rounded-3" alt="Principal">
+        <img src="Captura de pantalla 2025-12-02 134430.png" class="img-fluid rounded-3" alt="Principal">
       </div>
       <!-- Imágenes secundarias -->
       <div class="col-md-4">
         <div class="d-flex flex-column gap-2">
-          <img src="Captura de pantalla 2025-10-29 163153.png" class="img-fluid rounded-3" alt="Foto 1">
-          <img src="Mirador-en-Itagui.jpg" class="img-fluid rounded-3" alt="Foto 2">
+          <img src="rosario.jpg" class="img-fluid rounded-3" alt="Foto 1">
+          <img src="Captura de pantalla 2025-12-02 134611.png" class="img-fluid rounded-3" alt="Foto 2">
         </div>
       </div>
     </div>
@@ -123,8 +123,8 @@
     <div class="comments-section">
         <h4>Comentarios</h4>
 
-        <div class="comment">¡Me encantó la vista desde este lugar!</div>
-        <div class="comment">Muy buena atención y comida deliciosa.</div>
+        <div class="comment">Muy bonito el lugar</div>
+        <div class="comment">Me encantan sus eventos religiosos</div>
 
         <div class="comment-box">
             <textarea placeholder="Escribe tu comentario..."></textarea>
@@ -136,18 +136,11 @@
     <div class="description-section">
         <h4>Sobre este lugar</h4>
         <p>
-            La Montaña que Piensa es uno de los destinos turísticos más especiales de Itagüí, 
-            reconocido por su vista panorámica del Valle de Aburrá y su ambiente natural.
+           La Iglesia Nuestra Señora del Rosario es uno de los principales referentes históricos y religiosos de Itagüí. Ubicada en el corazón del Parque Principal, esta iglesia destaca por su arquitectura tradicional, su fachada imponente y su importancia cultural en la vida del municipio. Es un espacio de encuentro para la comunidad, escenario de celebraciones religiosas, actividades culturales y manifestaciones de la identidad local.
         </p>
 
         <p>
-            Allí también se realizan presentaciones artísticas, música en vivo e interpretaciones,
-            lo que convierte el lugar en un espacio cultural y turístico.
-        </p>
-
-        <p>
-            Además funciona como restaurante, ideal para disfrutar comida típica y compartir 
-            mientras se aprecia un paisaje único.
+           En su interior tiene elementos patrimoniales, imágenes religiosas de gran valor y un ambiente sereno que invita a la contemplación. Gracias a su cercanía con el parque, comercios y rutas de transporte, es un punto estratégico dentro del recorrido turístico por el centro de Itagüí.
         </p>
     </div>
 
@@ -165,7 +158,7 @@
 
     <script>
         // Inicializa el mapa centrado (lat, lon) y con zoom
-        const map = L.map('map').setView([6.19533, -75.61902], 15); // Itagüí, Colombia
+        const map = L.map('map').setView([6.17224, -75.60933], 20); // Itagüí, Colombia
 
         // Capa de teselas (OpenStreetMap)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -174,8 +167,8 @@
         }).addTo(map);
 
         // Marcador de ejemplo con popup
-        L.marker([6.19533, -75.61902]).addTo(map)
-            .bindPopup('La montaña que piensa')
+        L.marker([6.17224, -75.60933]).addTo(map)
+            .bindPopup('Parroquia Nuestra Señora del Rosario de Itagüí')
             .openPopup();
 
         // Añade control de escala
