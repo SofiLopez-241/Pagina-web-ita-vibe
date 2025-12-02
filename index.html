@@ -3,9 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Principal</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+
 </head>
 <body>
-    
+ <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="Logo ita-vibe 2.png" alt="bootstrap" width="100" height="65"
+                    class="d-inline-block align-text-top">
+            </a>
+            <div class="nav-center">
+                <form class="search-form">
+                    <input type="text" placeholder="Buscar...">
+                    <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg></button>
+                </form>
+            </div>
+            <div class="mx-3">
+                <a class="navbar-brand" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="grey" class="bi bi-clock"
+                        viewBox="0 0 16 16">
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                    </svg>
+                </a>
+            </div>
+            <div class="mx-3">
+                <a class="navbar-brand" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="grey" class="bi bi-heart-fill"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+                    </svg>
+                </a>
+            </div>
+            <div class="mx-3">
+                <a class="navbar-brand" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="grey"
+                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+                </a>
+            </div>
+
+
+        </div>
+
+
+        </div>
+    </nav>
+<!-- Carrusel -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+         <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <img src="cealumbrados-22_43918837_20231206175644.webp" class="d-block w-100 hero-img" alt="Navidad Itagüí">
+      
+      <!-- Contenido encima (texto, botón, iconos) -->
+      <div class="carousel-caption text-start">
+        <h1>Descubre Itagüí</h1>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <img src="casa-cultura-itagui1.jpg" class="d-block w-100 hero-img" alt="">
+      <div class="carousel-caption text-start">
+        <h1>Vive la cultura</h1>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <img src="Parque-de-Itagui-1.jpg" class="d-block w-100 hero-img" alt="">
+      <div class="carousel-caption text-start">
+        <h1>Explora los destinos</h1>
+      </div>
+    </div>
+
+    <!-- Flechas -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+ <section class="container mt-5">
+        <h1><span>Descubre Itagüí</span><br></h1>
+
+        <div class="container text-center">
+            <div class="row mt-5 justify-content-center">
+
+                <div class="col-3 mb-5 align-self-start">
+                    <div class="card p-2">
+                        <img src="iglesia santa maria ita-vibe.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Iglesia de Santa Maria</h5>
+                            <p class="card-text">Parque principal de Itagüí</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 align-self-start">
+                    <div class="card p-2">
+                        <img src="Teatro caribe ita-vibe.avif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Teatro Caribe</h5>
+                            <p class="card-text">Barrio Villa Paula</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 align-self-start">
+                    <div class="card p-2">
+                        <img src="Dama girasol ita-vibe.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Dama girasol</h5>
+                            <p class="card-text">Parque recreativo Ditaires</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 align-self-start">
+                <a href="index3.html">
+                    <div class="card p-2">
+                        <img src="imagen la montaña que piensa.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">La montaña que piensa</h5>
+                            <p class="card-text">Vereda pedregal, Itagüí</p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+                <!-- Imagen primera columna Infografia -->
+                <div class="col-3 mt-5 align-self-start">
+                    <div class="card p-2">
+                        <img src="Casa museo ditaires.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Casa museo Ditaires</h5>
+                            <p class="card-text">Pilsen, Itagüí</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mt-5 align-self-start">
+                    <div class="card p-2">
+                        <img src="Museo comunitario graciano arcila velez.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Museo comunitario Graciano Arcila Vélez</h5>
+                            <p class="card-text">Fatima, El Rosario</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mt-5 align-self-start">
+                    <div class="card p-2">
+                        <img src="Fiestas de la pereza.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Fiestas de la pereza</h5>
+                            <p class="card-text">Parque principal, parque obrero-brasil</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mt-5 align-self-start">
+                    <div class="card p-2">
+                        <img src="Fiestas industria y comercio.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Fiestas de la industria, el comercio y la cultura</h5>
+                            <p class="card-text">Barrio Santa Maria y el estadio de Ditaires</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+    <div class="footer-container">
+
+        <!-- Logo y descripción -->
+        <div class="footer-section">
+            <img src="Logo ita-vibe 2.png" class="footer-logo" alt="Logo Ita-Vibe">
+
+            <p class="footer-text">
+                Ita-Vibe es una plataforma que conecta a locales y visitantes con la oferta cultural, 
+               festevidad y religioso de Itagüí. Explora eventos, destinos y experiencias únicas.
+            </p>
+        </div>
+
+        <!-- Enlaces -->
+        <div class="footer-section">
+            <h4>Enlaces de interés</h4>
+            <ul class="footer-links">
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="footer-section">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Ita-Vibe. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>

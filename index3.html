@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Vista del lugar</title>
+  <link rel="stylesheet" href="estilo3.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    /* 2. CSS para definir el tamaño del contenedor del mapa */
+    #map {
+      /* Es CRUCIAL que el contenedor del mapa tenga un alto definido */
+      height: 500px;
+      width: 100%;
+      /* Puedes añadir más estilos aquí para simular el look and feel de Google Maps,
+               como sombras o bordes redondeados, si lo deseas. */
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+
+<body>
+ <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="Logo ita-vibe 2.png" alt="bootstrap" width="100" height="65"
+                    class="d-inline-block align-text-top">
+            </a>
+            <div class="nav-center">
+                <form class="search-form">
+                    <input type="text" placeholder="Buscar...">
+                    <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg></button>
+                </form>
+            </div>
+            <div class="mx-3">
+                <a class="navbar-brand" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="grey" class="bi bi-clock"
+                        viewBox="0 0 16 16">
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                    </svg>
+                </a>
+            </div>
+            <div class="mx-3">
+                <a class="navbar-brand" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="grey" class="bi bi-heart-fill"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+                    </svg>
+                </a>
+            </div>
+            <div class="mx-3">
+                <a class="navbar-brand" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="grey"
+                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+                </a>
+            </div>
+
+
+        </div>
+
+
+        </div>
+    </nav>
+  <div class="container py-4">
+
+    <!-- Encabezado -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="fw-semibold">La Montaña Que Piensa</h2>
+      <div>
+        <a href="#" class="text-decoration-none text-dark me-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share"
+            viewBox="0 0 16 16">
+            <path
+              d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
+          </svg>
+          <i class="fa-solid fa-share-nodes"></i> Compartir
+        </a>
+        <a href="#" class="text-decoration-none text-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
+            viewBox="0 0 16 16">
+            <path
+              d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+          </svg>
+          <i class="fa-regular fa-heart"></i> Guardar
+        </a>
+      </div>
+    </div>
+
+    <!-- Galería -->
+    <div class="row g-2">
+      <!-- Imagen principal -->
+      <div class="col-md-8">
+        <img src="Captura de pantalla 2025-10-29 154425.png" class="img-fluid rounded-3" alt="Principal">
+      </div>
+      <!-- Imágenes secundarias -->
+      <div class="col-md-4">
+        <div class="d-flex flex-column gap-2">
+          <img src="Captura de pantalla 2025-10-29 163153.png" class="img-fluid rounded-3" alt="Foto 1">
+          <img src="Mirador-en-Itagui.jpg" class="img-fluid rounded-3" alt="Foto 2">
+        </div>
+      </div>
+    </div>
+  <div class="info-container">
+
+    <!-- Comentarios (izquierda) -->
+    <div class="comments-section">
+        <h4>Comentarios</h4>
+
+        <div class="comment">¡Me encantó la vista desde este lugar!</div>
+        <div class="comment">Muy buena atención y comida deliciosa.</div>
+
+        <div class="comment-box">
+            <textarea placeholder="Escribe tu comentario..."></textarea>
+            <button>Comentar</button>
+        </div>
+    </div>
+
+    <!-- Descripción (derecha) -->
+    <div class="description-section">
+        <h4>Sobre este lugar</h4>
+        <p>
+            La Montaña que Piensa es uno de los destinos turísticos más especiales de Itagüí, 
+            reconocido por su vista panorámica del Valle de Aburrá y su ambiente natural.
+        </p>
+
+        <p>
+            Allí también se realizan presentaciones artísticas, música en vivo e interpretaciones,
+            lo que convierte el lugar en un espacio cultural y turístico.
+        </p>
+
+        <p>
+            Además funciona como restaurante, ideal para disfrutar comida típica y compartir 
+            mientras se aprecia un paisaje único.
+        </p>
+    </div>
+
+</div>
+
+  <div class="container text-center my-3" style="border: none; border-bottom: 2px solid #C7D498;"></div>
+  <div class="container mb-4">
+    <h4>Ubicación</h4>
+  </div>
+ <!-- Mapa --> 
+  <div id="map" class="container"></div>
+</a>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+    <script>
+        // Inicializa el mapa centrado (lat, lon) y con zoom
+        const map = L.map('map').setView([6.19533, -75.61902], 15); // Itagüí, Colombia
+
+        // Capa de teselas (OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Marcador de ejemplo con popup
+        L.marker([6.19533, -75.61902]).addTo(map)
+            .bindPopup('La montaña que piensa')
+            .openPopup();
+
+        // Añade control de escala
+        L.control.scale().addTo(map);
+    </script>
+
+</body>
+
+</html>
