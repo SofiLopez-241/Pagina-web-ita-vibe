@@ -82,7 +82,7 @@
 
     <!-- Encabezado -->
     <div class="d-flex justify-content-between align-items-center mb-3">
-      <h2 class="fw-semibold">Museo Comunitario Graciliano Arcila Pérez</h2>
+      <h2 class="fw-semibold">Fiestas de la industia, el comercio y la cultura</h2>
       <div>
         <a href="#" class="text-decoration-none text-dark me-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share"
@@ -107,13 +107,13 @@
     <div class="row g-2">
       <!-- Imagen principal -->
       <div class="col-md-8">
-        <img src="museo-graciliano-arcila-velez-itagui.webp" class="img-fluid rounded-3" alt="Principal">
+        <img src="Fiestas industria y comercio.webp" class="img-fluid rounded-3" alt="Principal">
       </div>
       <!-- Imágenes secundarias -->
       <div class="col-md-4">
         <div class="d-flex flex-column gap-2">
-          <img src="comunitario.jpg" class="img-fluid rounded-3" alt="Foto 1">
-          <img src="graciliano.jpg" class="img-fluid rounded-3" alt="Foto 2">
+          <img src="fiestas-de-itagui-696x392-1.jpg" class="img-fluid rounded-3" alt="Foto 1">
+          <img src="18-08-2024-LA-CORPORACION-26-768x512.jpg" class="img-fluid rounded-3" alt="Foto 2">
         </div>
       </div>
     </div>
@@ -123,8 +123,8 @@
     <div class="comments-section">
         <h4>Comentarios</h4>
 
-        <div class="comment">Muy acogedor y bien organizado. Se nota el cariño de la comunidad en cada detalle.</div>
-        <div class="comment">Un espacio cultural que vale la pena apoyar. Aprendí cosas que no conocía de Itagüí.</div>
+        <div class="comment">Los conciertos estuvieron increíbles, y la organización fue excelente.</div>
+        <div class="comment">Me encantó la variedad de actividades, hay algo para todos. Muy buenas fiestas.</div>
 
         <div class="comment-box">
             <textarea placeholder="Escribe tu comentario..."></textarea>
@@ -134,13 +134,13 @@
 
     <!-- Descripción (derecha) -->
     <div class="description-section">
-        <h4>Sobre este lugar</h4>
+        <h4>Sobre esta festevidad</h4>
         <p>
-         El Museo Comunitario Graciliano Arcila Pérez es un espacio dedicado a preservar la memoria y las tradiciones de Itagüí. A través de objetos antiguos, fotografías y relatos de la comunidad, el museo muestra cómo ha evolucionado el municipio y mantiene vivo el patrimonio local.
+         Las Fiestas de la Industria, el Comercio y la Cultura son el evento más grande y representativo de Itagüí. Celebradas cada año en diferentes puntos del municipio especialmente en el Parque Principal, Ditaires y zonas comerciales estas fiestas reúnen música, gastronomía, emprendimientos y actividades culturales que muestran la fuerza económica y creativa de la ciudad.
         </p>
-
+        
         <p>
-          Es un lugar sencillo pero muy acogedor, ideal para quienes quieren conocer de cerca la historia de la ciudad. Sus exposiciones y actividades permiten entender la identidad de Itagüí de una manera cercana y auténtica.
+         Durante la celebración se realizan conciertos, ferias empresariales, muestras artísticas, desfiles y presentaciones para toda la familia. Es una fecha ideal para disfrutar del talento local, apoyar a los emprendedores y vivir el ambiente vibrante y diverso que caracteriza a Itagüí.
         </p>
     </div>
 
@@ -158,7 +158,7 @@
 
     <script>
         // Inicializa el mapa centrado (lat, lon) y con zoom
-        const map = L.map('map').setView([6.17624, -75.61378], 20); // Itagüí, Colombia
+        const map = L.map('map').setView([6.16965, -75.62687], 19); // Itagüí, Colombia
 
         // Capa de teselas (OpenStreetMap)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -167,8 +167,8 @@
         }).addTo(map);
 
         // Marcador de ejemplo con popup
-        L.marker([6.17624, -75.61378]).addTo(map)
-            .bindPopup('Museo Comunitario Graciliano Arcila Pérez')
+        L.marker([6.16965, -75.62687]).addTo(map)
+            .bindPopup('Estadio Ditaires')
             .openPopup();
 
         // Añade control de escala
