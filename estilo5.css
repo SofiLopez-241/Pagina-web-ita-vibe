@@ -1,0 +1,171 @@
+/* Fondo general */
+body, html {
+  height: 100%;
+  background-color: #C7D498;
+}
+
+/* Fondo semicircular */
+.bg-hero {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hero-circle {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140%;
+  height: 60%;
+  background: linear-gradient(180deg, #f9eee0 0%, #f9eee0 100%);
+  border-radius: 50%;
+  opacity: 100%;
+}
+
+.back-arrow a {
+  color: #111;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+/* Contenedor del formulario */
+.login-card {
+  width: 380px;
+  max-width: calc(100% - 40px);
+  margin-top: 6rem;
+}
+
+/* Botón */
+.btn-dark-custom {
+  background: #c7d498;
+  border: none;
+  color: #1e1e1e;
+  border-radius: 8px;
+  padding: 10px 18px;
+  width: 100%;
+  opacity: 90%;
+}
+
+/* Enlace "¿Olvidaste tu contraseña?" */
+.forgot-link {
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 576px) {
+  .login-card {
+    margin-top: 3.5rem;
+  }
+}
+/* Ajuste para movimiento reducido (accesibilidad)        */
+/* ------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+    .card,
+    .card-img-top {
+        transition: none;
+        transform: none;
+    }
+}
+/* Navbar principal */
+.navbar {
+    border-color: rgba(240, 216, 111, 0.6); /* tono cálido naranja */
+    box-shadow: 0 0 12px rgba(160, 149, 60, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 30px;
+    color: white;
+}
+
+/* Secciones izquierda y derecha */
+.nav-left, .nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-left a,
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+    color: #00bfff;
+}
+
+/* Centro: formulario de búsqueda */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-form {
+    display: flex;
+    border-color: #c7d498;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+}
+
+.search-form input {
+    border: none;
+    padding: 8px 12px;
+    flex: 1;
+    outline: none;
+    font-size: 14px;
+}
+/* Contenedor del buscador */
+.search-form {
+    display: flex;
+    background-color: white;
+    border: 2px solid transparent;  /* borde invisible por defecto */
+    border-radius: 25px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Input del buscador */
+.search-form input {
+    border: none;
+    padding: 8px 12px;
+    flex: 1;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Botón del buscador */
+.search-form button {
+    background-color: #c7d498;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+/* Hover sobre todo el formulario (input + botón) */
+.search-form:hover {
+    border-color: #8c956b; /* cambia el borde */
+    box-shadow: 0 0 5px rgba(141, 239, 103, 0.582); /* efecto sutil como en Bootstrap */
+}
+
+/* Hover específico del botón (opcional, para reforzar el efecto) */
+.search-form button:hover {
+    background-color: rgba(66, 124, 50, 0.833);
+}

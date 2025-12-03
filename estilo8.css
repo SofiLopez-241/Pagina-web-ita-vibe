@@ -1,0 +1,184 @@
+body {
+    background: #f8f1e7;
+    overflow-x: hidden;
+}
+
+/* Semicírculo grande a la izquierda */
+.semi-left-circle {
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    background: #c4d095;
+    z-index: -1;
+}
+
+/* Perfil */
+.profile-img {
+    width: 70px;
+    height: 70px;
+    background: #b7c791;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
+.setting-item {
+    border: none;
+    background: transparent;
+    font-size: 17px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.setting-item:hover {
+    opacity: 0.8;
+}
+
+.setting-content {
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.settings-list {
+    max-width: 550px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .semi-left-circle {
+        width: 400px;
+        height: 400px;
+        top: -100px;
+        left: -150px;
+    }
+
+    .profile-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Ajuste para movimiento reducido (accesibilidad)        */
+/* ------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+    .card,
+    .card-img-top {
+        transition: none;
+        transform: none;
+    }
+}
+/* Navbar principal */
+.navbar {
+    border-color: rgba(240, 216, 111, 0.6); /* tono cálido naranja */
+    box-shadow: 0 0 12px rgba(160, 149, 60, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 30px;
+    color: white;
+}
+
+/* Secciones izquierda y derecha */
+.nav-left, .nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-left a,
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+    color: #00bfff;
+}
+
+/* Centro: formulario de búsqueda */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-form {
+    display: flex;
+    border-color: #c7d498;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+}
+
+.search-form input {
+    border: none;
+    padding: 8px 12px;
+    flex: 1;
+    outline: none;
+    font-size: 14px;
+}
+/* Contenedor del buscador */
+.search-form {
+    display: flex;
+    background-color: white;
+    border: 2px solid transparent;  /* borde invisible por defecto */
+    border-radius: 25px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Input del buscador */
+.search-form input {
+    border: none;
+    padding: 8px 12px;
+    flex: 1;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Botón del buscador */
+.search-form button {
+    background-color: #c7d498;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+/* Hover sobre todo el formulario (input + botón) */
+.search-form:hover {
+    border-color: #8c956b; /* cambia el borde */
+    box-shadow: 0 0 5px rgba(141, 239, 103, 0.582); /* efecto sutil como en Bootstrap */
+}
+
+/* Hover específico del botón (opcional, para reforzar el efecto) */
+.search-form button:hover {
+    background-color: rgba(66, 124, 50, 0.833);
+}
