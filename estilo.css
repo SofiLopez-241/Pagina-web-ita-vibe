@@ -8,7 +8,17 @@ body {
   background-color: #f9eee0;
   color: #222;
 }
-
+h1 {
+    font-family: 'Raleway', serif;
+    font-size: 3.0rem;
+    font-weight: 900;
+}
+h2 {
+    font-family: 'Raleway', serif;
+    font-size: 3.0rem;
+    font-weight: 900;
+    text-align: center;
+}
 /* HERO - imagen de portada */
 .hero-img {
   height: 85vh;
