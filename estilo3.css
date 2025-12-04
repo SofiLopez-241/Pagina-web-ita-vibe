@@ -260,3 +260,23 @@ h1 {
     border-top: 1px solid rgba(45, 44, 44, 0.416);
     font-size: 14px;
 }
+/* 📱 MODO CELULAR */
+@media (max-width: 768px) {
+
+    .info-container {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .comments-section,
+    .description-section {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 15px; /* Se ve bonito y centrado */
+    }
+
+    .comment-box textarea {
+        width: 100%;
+    }
+}

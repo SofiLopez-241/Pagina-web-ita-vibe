@@ -25,7 +25,7 @@
 </head>
 
 <body>
-<!-- NAVBAR (Bootstrap responsive) -->
+<!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg bg-white shadow-sm">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index1.html">
@@ -119,36 +119,48 @@
         </div>
       </div>
     </div>
-  <div class="info-container">
+  <div class="container my-5">
+  <div class="row">
 
-    <!-- Comentarios (izquierda) -->
-    <div class="comments-section">
-        <h4>Comentarios</h4>
 
-        <div class="comment">Muy bonito el lugar</div>
-        <div class="comment">Me encantan sus eventos religiosos</div>
+    <!-- DESCRIPCIÓN (va primero en celular) -->
+    <div class="col-12 col-lg-8 mb-4 description-section">
+      <h4>Sobre este lugar</h4>
+      <p>
+        La Montaña que Piensa es uno de los destinos turísticos más especiales de Itagüí, 
+        reconocido por su vista panorámica del Valle de Aburrá y su ambiente natural.
+      </p>
 
-        <div class="comment-box">
-            <textarea placeholder="Escribe tu comentario..."></textarea>
-            <button>Comentar</button>
-        </div>
+      <p>
+        Allí también se realizan presentaciones artísticas, música en vivo e interpretaciones,
+        lo que convierte el lugar en un espacio cultural y turístico.
+      </p>
+
+      <p>
+        Además funciona como restaurante, ideal para disfrutar comida típica y compartir 
+        mientras se aprecia un paisaje único.
+      </p>
     </div>
 
-    <!-- Descripción (derecha) -->
-    <div class="description-section">
-        <h4>Sobre este lugar</h4>
-        <p>
-           La Iglesia Nuestra Señora del Rosario es uno de los principales referentes históricos y religiosos de Itagüí. Ubicada en el corazón del Parque Principal, esta iglesia destaca por su arquitectura tradicional, su fachada imponente y su importancia cultural en la vida del municipio. Es un espacio de encuentro para la comunidad, escenario de celebraciones religiosas, actividades culturales y manifestaciones de la identidad local.
-        </p>
 
-        <p>
-           En su interior tiene elementos patrimoniales, imágenes religiosas de gran valor y un ambiente sereno que invita a la contemplación. Gracias a su cercanía con el parque, comercios y rutas de transporte, es un punto estratégico dentro del recorrido turístico por el centro de Itagüí.
-        </p>
+    <!-- COMENTARIOS (va a la derecha en pantallas grandes) -->
+    <div class="col-12 col-lg-4 comments-section">
+      <h4>Comentarios</h4>
+
+      <div class="comment">¡Me encantó la vista desde este lugar!</div>
+      <div class="comment">Muy buena atención y comida deliciosa.</div>
+
+      <div class="comment-box mt-3">
+        <textarea class="form-control" rows="3" placeholder="Escribe tu comentario..."></textarea>
+        <button class="btn btn-success mt-2 w-100">Comentar</button>
+      </div>
     </div>
 
+
+  </div>
 </div>
-
-  <div class="container text-center my-3" style="border: none; border-bottom: 2px solid #C7D498;"></div>
+  <!-- SEPARADOR -->
+   <div class="container text-center my-3" style="border: none; border-bottom: 2px solid #C7D498;"></div>
   <div class="container mb-4">
     <h4>Ubicación</h4>
   </div>
